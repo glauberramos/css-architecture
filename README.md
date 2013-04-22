@@ -49,7 +49,9 @@ Style is for css, not html. Semantic names - classes name
  .button {
    font-size: 1.5em;
  }
-</code></pre>
+</code>
+</pre>
+
 
 ---
 
