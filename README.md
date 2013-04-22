@@ -76,7 +76,16 @@ Normalize is a softer way to reset browsers default styles. It makes the css for
 3. Use mixins to avoid duplicated code - tags de browsers
 4. A file for base style for HTML tags and classes
 5. A file for each component: button, breadcrumb, list, search, footer, header, etc...
-6. A file the imports all components
+6. A file that imports all components
+<pre lang="css"><code>
+@import "base"
+@import "buttons"
+@import "grids"
+@import "header"
+
+</code></pre>
+
+
 7. A file with variables for colors, fonts, grid sizes and icons
 8. Use a responsive Grid
 9. Have a file for each page of your application, each file will import the mixins that are necessary
