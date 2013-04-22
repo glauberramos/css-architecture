@@ -1,13 +1,29 @@
 #CSS Architecture
 ================
 
-Info about CSS architecture and code standards
+Information about CSS architecture and code standards
 
 ##What developers usually think when writing code:
 
 ### Readability
+
+Readability is very important to make the code clean, mantainable and easy to change/understand. We can achieve that following code standards and some important things like:
+
+1. **White spaces**
+
+White spaces are important to give a pause for your eyes and make reading fluid.
+
+2. **Identation**
+
+Ident your code to better convey the structure of it to human readers.
+
+3. **More information**: 
+  * [idiomatic.css] (https://github.com/necolas/idiomatic-css) by @necolas
+  * [CSS-Guidelines] (https://github.com/csswizardry/CSS-Guidelines) by @csswizardry
+  * [CSS Styleguide] (https://github.com/styleguide/css) by Github
+
 ### Separation of Responsibility
-### No Repeated Code
+### Don't repeat yourself - DRY
 ### Object Oriented
 ### Concise
 ### Coarse
@@ -25,35 +41,50 @@ Boilerplating - fors
 Perfomance - multiple selectors
 Style is for css, not html. Semantic names - classes name
 
-##Architecture
-
 <pre>
 .
 |-- stylesheets/
 |   |-- components/
-|       `-- _buttons.scss
-|       `-- _grids.scss
-|       `-- _header.scss
-|   |-- layouts
-|   `-- framworks.scss
-`-- package.json
+|       |-- _base.scss
+|       |-- _buttons.scss
+|       |-- _grids.scss
+|       |-- _header.scss
+|   |-- pages/
+|   |-- _framework.scss
 </pre>
 
 <pre lang="css"><code>
+@import "buttons"
+
 .button {
   font-size: 1.5em;
 }
 </code></pre>
 
-1. Pre processadores - sass, less or stylus
-2. Resete ou normalise seu css [Normalize] (http://necolas.github.io/normalize.css/)
-3. Use mixins para evitar codigo duplicado - tags de browsers
-4. Tenha um arquivo base para tags html comuns e classes comuns
-5. Tenha um arquivo com todos mixins
-6. Tenha um arquivo para cada componente, button, breadcrumb, list, search, footer, header, etc...
-7. Tenha um arquivo de variaveis com cor, fonte, grid size e icones
-8. Use um grid responsivo, crie o seu
-9. Tenha um arquivo para cada pagina do seu site, onde ira importar aqueles mixins
-10. [BEM] (http://bem.info/method/) [OOCSS] (http://oocss.org/), [SMACSS] (http://smacss.com/)
-11. No final seu css sera um framework que pode ser usado em outros projetos
-12. Teste seu css, frontend style guides, style tyles
+---
+
+##Architecture
+
+1. Pre Processors 
+  * [SASS] (http://sass-lang.com/)
+  * [LESS] (http://lesscss.org/)
+  * [Stylus] (http://learnboost.github.io/stylus/)
+  
+2. Normalize your css [Normalize] (http://necolas.github.io/normalize.css/)
+Normalize is a softer way to reset browsers default styles. It makes the css for common HTML tags concise beetwen all browsers.
+
+3. Use mixins to avoid duplicated code - tags de browsers
+4. A file for base style for HTML tags and classes
+5. A file for each component: button, breadcrumb, list, search, footer, header, etc...
+6. A file the imports all components
+7. A file with variables for colors, fonts, grid sizes and icons
+8. Use a responsive Grid
+9. Have a file for each page of your application, each file will import the mixins that are necessary
+
+10. Architecture Paradigms
+  * [BEM] (http://bem.info/method/) 
+  * [OOCSS] (http://oocss.org/)
+  * [SMACSS] (http://smacss.com/)
+  
+11. In the end you are gonna have a CSS framework that can be used in other projects
+12. Test your css, frontend style guides, style tyles
