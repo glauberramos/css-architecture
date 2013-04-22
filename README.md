@@ -41,24 +41,14 @@ Boilerplating - fors
 Perfomance - multiple selectors
 Style is for css, not html. Semantic names - classes name
 
-<pre>
-.
-|-- stylesheets/
-|   |-- components/
-|       |-- _base.scss
-|       |-- _buttons.scss
-|       |-- _grids.scss
-|       |-- _header.scss
-|   |-- pages/
-|   |-- _framework.scss
-</pre>
+
 
 <pre lang="css"><code>
-@import "buttons"
-
-.button {
-  font-size: 1.5em;
-}
+ @import "buttons"
+ 
+ .button {
+   font-size: 1.5em;
+ }
 </code></pre>
 
 ---
@@ -75,20 +65,57 @@ Normalize is a softer way to reset browsers default styles. It makes the css for
 
 3. Use mixins to avoid duplicated code - tags de browsers
 4. A file for base style for HTML tags and classes
+<pre lang="css"><code>
+ h1 {
+  font-size: 3em;
+ }
+
+ strong {
+  font-size: 1.2em;
+  font-weigth: bold;
+ }
+</code></pre>
+
 5. A file for each component: button, breadcrumb, list, search, footer, header, etc...
+<pre>
+.
+|-- stylesheets/
+|   |-- components/
+|       |-- _base.scss
+|       |-- _buttons.scss
+|       |-- _grids.scss
+|       |-- _header.scss
+|   |-- pages/
+|       |-- login.scss
+|       |-- home.scss
+|   |-- _variables.scss
+|   |-- _framework.scss
+</pre> 
+
 6. A file that imports all components
 <pre lang="css"><code>
-@import "base"
-@import "buttons"
-@import "grids"
-@import "header"
-
+ @import "base"
+ @import "buttons"
+ @import "grids"
+ @import "header"
 </code></pre>
 
 
 7. A file with variables for colors, fonts, grid sizes and icons
+<pre lang="css"><code>
+ $titleColor: #123f32;
+ $textColor: #342343;
+
+ $normalFont: "Helvetica";
+
+ $gridColumns: 12;
+</code></pre>
+
 8. Use a responsive Grid
+ * If you don't want to create your own grid, you can use [Foundation] (http://foundation.zurb.com/grid.php)
+
 9. Have a file for each page of your application, each file will import the mixins that are necessary
+Example: login.scss and home.scss.
 
 10. Architecture Paradigms
   * [BEM] (http://bem.info/method/) 
