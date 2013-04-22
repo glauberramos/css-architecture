@@ -7,7 +7,7 @@ Information about CSS architecture and code standards
 
 ### 1.Readability
 
-Readability is very important to make the code clean, mantainable and easy to change/understand. We can achieve that following code standards and some important things like:
+> Readability is very important to make the code clean, mantainable and easy to change/understand. We can achieve that following code standards and some important things like:
 
 1. White spaces
 
