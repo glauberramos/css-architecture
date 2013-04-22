@@ -5,7 +5,9 @@ Information about CSS architecture and code standards
 
 ##What developers usually think when writing code:
 
-### 1.Readability
+Separation of Responsibility, Don't repeat yourself - DRY, Object Oriented, Concise, Coarse, Semantic, Performance, Boilerplating and Testable
+
+### 1. Readability
 
 > Readability is very important to make the code clean, mantainable and easy to change/understand. We can achieve that following code standards and some important things like:
 
@@ -17,24 +19,18 @@ White spaces are important to give a pause for your eyes and make reading fluid.
 
 Ident your code to better convey the structure of it to human readers.
 
+3. Nesting
+
+4. Identation
+
+5. Standards
+
 3. More information: 
-  * [idiomatic.css] (https://github.com/necolas/idiomatic-css) by @necolas
-  * [CSS-Guidelines] (https://github.com/csswizardry/CSS-Guidelines) by @csswizardry
-  * [CSS Styleguide] (https://github.com/styleguide/css) by Github
+ * [idiomatic.css] (https://github.com/necolas/idiomatic-css) by @necolas
+ * [CSS-Guidelines] (https://github.com/csswizardry/CSS-Guidelines) by @csswizardry
+ * [CSS Styleguide] (https://github.com/styleguide/css) by Github
 
-### Separation of Responsibility
-### Don't repeat yourself - DRY
-### Object Oriented
-### Concise
-### Coarse
-### Semantic
-### Performance
-### Boilerplating
-### Testable
-
-
-Repeated Code - variables
-Readability - nesting, identitation, standards
+DRY - variables
 Single responsability, repeated code - mixins
 Object oriented - oocss, bem, smacss
 Boilerplating - fors
@@ -47,10 +43,11 @@ Style is for css, not html. Semantic names - classes name
 ##CSS Architecture
 
 1. Pre Processors 
-  * [SASS] (http://sass-lang.com/)
-  * [LESS] (http://lesscss.org/)
-  * [Stylus] (http://learnboost.github.io/stylus/)
-  
+ * [SASS] (http://sass-lang.com/)
+ * [LESS] (http://lesscss.org/)
+ * [Stylus] (http://learnboost.github.io/stylus/)
+
+<br>
 2. Normalize your css [Normalize] (http://necolas.github.io/normalize.css/)
 Normalize is a softer way to reset browsers default styles. It makes the css for common HTML tags concise beetwen all browsers.
 
