@@ -9,15 +9,15 @@ Information about CSS architecture and code standards
 
 Readability is very important to make the code clean, mantainable and easy to change/understand. We can achieve that following code standards and some important things like:
 
-1.**White spaces**
+1. White spaces
 
 White spaces are important to give a pause for your eyes and make reading fluid.
 
-2.**Identation**
+2. Identation
 
 Ident your code to better convey the structure of it to human readers.
 
-3.**More information**: 
+3. More information: 
   * [idiomatic.css] (https://github.com/necolas/idiomatic-css) by @necolas
   * [CSS-Guidelines] (https://github.com/csswizardry/CSS-Guidelines) by @csswizardry
   * [CSS Styleguide] (https://github.com/styleguide/css) by Github
@@ -40,17 +40,6 @@ Object oriented - oocss, bem, smacss
 Boilerplating - fors
 Perfomance - multiple selectors
 Style is for css, not html. Semantic names - classes name
-
-
-
-<pre lang="css"><code>
- @import "buttons"
- 
- .button {
-   font-size: 1.5em;
- }
-</code>
-</pre>
 
 
 ---
@@ -105,11 +94,14 @@ Normalize is a softer way to reset browsers default styles. It makes the css for
 
 7. A file with variables for colors, fonts, grid sizes and icons
 <pre lang="css"><code>
+ //color variables
  $titleColor: #123f32;
  $textColor: #342343;
 
+ //font variables
  $normalFont: "Helvetica";
 
+ //grid variables
  $gridColumns: 12;
 </code></pre>
 
@@ -129,4 +121,5 @@ Example: login.scss and home.scss.
   You wanna test your CSS as any other code that we created. In order to do this you need a live page that you are gonna be able to continuously test and verify your basic styles. You can check how your style respond to different screen sizes, you can check if yout style is not breaking, etc...
 
   [Mirebalais Style Guide] (http://mirebalaisstyleguide.herokuapp.com/)
+  
   [Style Tiles] (http://sparkbox.github.com/style-prototype/)
