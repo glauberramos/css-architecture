@@ -126,3 +126,7 @@ Example: login.scss and home.scss.
   
 11. In the end you are gonna have a CSS framework that can be used in other projects
 12. Test your css, frontend style guides, style tyles
+  You wanna test your CSS as any other code that we created. In order to do this you need a live page that you are gonna be able to continuously test and verify your basic styles. You can check how your style respond to different screen sizes, you can check if yout style is not breaking, etc...
+
+  [Mirebalais Style Guide] (http://mirebalaisstyleguide.herokuapp.com/)
+  [Style Tiles] (http://sparkbox.github.com/style-prototype/)
