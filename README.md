@@ -5,19 +5,19 @@ Information about CSS architecture and code standards
 
 ##What developers usually think when writing code:
 
-### Readability
+### 1.Readability
 
 Readability is very important to make the code clean, mantainable and easy to change/understand. We can achieve that following code standards and some important things like:
 
-1. **White spaces**
+1.**White spaces**
 
 White spaces are important to give a pause for your eyes and make reading fluid.
 
-2. **Identation**
+2.**Identation**
 
 Ident your code to better convey the structure of it to human readers.
 
-3. **More information**: 
+3.**More information**: 
   * [idiomatic.css] (https://github.com/necolas/idiomatic-css) by @necolas
   * [CSS-Guidelines] (https://github.com/csswizardry/CSS-Guidelines) by @csswizardry
   * [CSS Styleguide] (https://github.com/styleguide/css) by Github
@@ -63,7 +63,7 @@ Style is for css, not html. Semantic names - classes name
 
 ---
 
-##Architecture
+##CSS Architecture
 
 1. Pre Processors 
   * [SASS] (http://sass-lang.com/)
