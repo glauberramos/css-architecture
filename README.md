@@ -133,7 +133,7 @@ Semantic names - classes name
 </code></pre>
 
 ## Use a responsive Grid
- * If you don't want to create your own grid, you can use [Foundation] (http://foundation.zurb.com/grid.php)
+ If you don't want to create your own grid, you can use [Foundation] (http://foundation.zurb.com/grid.php)
 
 ## Have a file for each page of your application
 
@@ -158,5 +158,4 @@ The goal is to have Modular CSS. Objected oriented.
   You wanna test your CSS as any other code that we created. In order to do this you need a live page that you are gonna be able to continuously test and verify your basic styles. You can check how your style respond to different screen sizes, you can check if yout style is not breaking, etc...
 
  * [Mirebalais Style Guide] (http://mirebalaisstyleguide.herokuapp.com/)
-  
  * [Style Tiles] (http://sparkbox.github.com/style-prototype/)
