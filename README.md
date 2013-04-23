@@ -43,11 +43,14 @@ Style is for css, not html. Semantic names - classes name
 ##CSS Architecture
 
 ### Pre Processors 
+ 
+ Pre Processors are really important because they give nice tools that are common on main programming languages. Tools like: Nesting, Mixins (Functions), Variables, Fors, IFs and Selector Inheritance.
+
  * [SASS] (http://sass-lang.com/)
  * [LESS] (http://lesscss.org/)
  * [Stylus] (http://learnboost.github.io/stylus/)
 
-### Normalize your css [Normalize] (http://necolas.github.io/normalize.css/)
+### Normalize your CSS - [Normalize] (http://necolas.github.io/normalize.css/)
  
  Normalize is a softer way to reset browsers default styles. It makes the css for common HTML tags concise beetwen all browsers and give you Cross-Browser default experience.
 
@@ -55,9 +58,11 @@ Style is for css, not html. Semantic names - classes name
 
  Uxing mixins (that are similar to functions) is very nice to avoid duplicate code and keep it reusable. It's nice also for consolidating cross-browser prefixes into a single function.
 
- A good library for SASS is [Compass] (http://compass-style.org/). For LESS you can use [LESS elements] (http://lesselements.com/) and for Stylus you can use [NIB] (http://visionmedia.github.io/nib/)
+ For common mixins you can see a library for SASS - [Compass] (http://compass-style.org/). For LESS you can use [LESS elements] (http://lesselements.com/) and for Stylus you can use [NIB] (http://visionmedia.github.io/nib/)
 
-### Create a file for base style for HTML tags and classes
+### Create a file for base style
+
+ For style that are for HTML common tags and generic classes you can create a _base.scss file.
 
  <pre lang="css"><code>
   h1 {
@@ -70,7 +75,10 @@ Style is for css, not html. Semantic names - classes name
   }
  </code></pre>
 
-### Create a file for each component: button, breadcrumb, list, search, footer, header, etc...
+### Create a file for each component
+
+ You can create a separate file for each component, example: button, breadcrumb, list, search, footer, header, etc...
+ 
 <pre>
 .
 |-- stylesheets/
@@ -87,6 +95,7 @@ Style is for css, not html. Semantic names - classes name
 </pre> 
 
 ### Create a file that imports all components
+
 <pre lang="css"><code>
  @import "base"
  @import "buttons"
@@ -95,7 +104,10 @@ Style is for css, not html. Semantic names - classes name
 </code></pre>
 
 
-### Create a file with variables for colors, fonts, grid sizes and icons
+### Create a file with variables 
+
+ For colors, fonts, grid sizes and icons.
+ 
 <pre lang="css"><code>
  //color variables
  $titleColor: #123f32;
@@ -111,8 +123,9 @@ Style is for css, not html. Semantic names - classes name
 ### Use a responsive Grid
  * If you don't want to create your own grid, you can use [Foundation] (http://foundation.zurb.com/grid.php)
 
-### Have a file for each page of your application, each file will import the mixins that are necessary
-Example: login.scss and home.scss.
+### Have a file for each page of your application
+
+ Each file will import the mixins that are necessary. Example: login.scss and home.scss.
 
 ### Architecture Paradigms
  * [BEM] (http://bem.info/method/) 
@@ -120,9 +133,13 @@ Example: login.scss and home.scss.
  * [SMACSS] (http://smacss.com/)
 
 
-### In the end you are gonna have a CSS framework that can be used in other projects
+### In the end a CSS framework
 
-### Test your css, frontend style guides, style tyles
+ You are gonna have a CSS framework that can be used in other projects.
+
+### Test your CSS
+
+  Example: frontend style guides and style tyles.
   You wanna test your CSS as any other code that we created. In order to do this you need a live page that you are gonna be able to continuously test and verify your basic styles. You can check how your style respond to different screen sizes, you can check if yout style is not breaking, etc...
 
  * [Mirebalais Style Guide] (http://mirebalaisstyleguide.herokuapp.com/)
