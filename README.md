@@ -1,7 +1,7 @@
 #CSS Architecture
 ================
 
-Information about CSS architecture and code standards
+Information about CSS architecture and code standards. This is a live document and I accept and encourage contributions :D
 
 ##What developers usually think when writing code:
 
@@ -9,21 +9,21 @@ Separation of Responsibility, Don't repeat yourself - DRY, Object Oriented, Conc
 
 ### 1. Readability
 
-> Readability is very important to make the code clean, mantainable and easy to change/understand. We can achieve that following code standards and some important things like:
+ > Readability is very important to make the code clean, mantainable and easy to change/understand. We can achieve that following code standards and some important things like:
 
-1. White spaces
+ * White spaces
 
-White spaces are important to give a pause for your eyes and make reading fluid.
+ > White spaces are important to give a pause for your eyes and make reading fluid.
 
-2. Identation
+ * Identation
 
-Ident your code to better convey the structure of it to human readers.
+ > Ident your code to better convey the structure of it to human readers.
 
-3. Nesting
+ * Nesting
 
-4. Identation
+ * Identation
 
-5. Standards
+ * Standards
 
 3. More information: 
  * [idiomatic.css] (https://github.com/necolas/idiomatic-css) by @necolas
@@ -42,29 +42,35 @@ Style is for css, not html. Semantic names - classes name
 
 ##CSS Architecture
 
-1. Pre Processors 
+### Pre Processors 
  * [SASS] (http://sass-lang.com/)
  * [LESS] (http://lesscss.org/)
  * [Stylus] (http://learnboost.github.io/stylus/)
 
-<br>
-2. Normalize your css [Normalize] (http://necolas.github.io/normalize.css/)
-Normalize is a softer way to reset browsers default styles. It makes the css for common HTML tags concise beetwen all browsers.
+### Normalize your css [Normalize] (http://necolas.github.io/normalize.css/)
+ 
+ Normalize is a softer way to reset browsers default styles. It makes the css for common HTML tags concise beetwen all browsers and give you Cross-Browser default experience.
 
-3. Use mixins to avoid duplicated code - tags de browsers
-4. A file for base style for HTML tags and classes
-<pre lang="css"><code>
- h1 {
-  font-size: 3em;
- }
+### Use mixins to avoid duplicated code
 
- strong {
-  font-size: 1.2em;
-  font-weigth: bold;
- }
-</code></pre>
+ Uxing mixins (that are similar to functions) is very nice to avoid duplicate code and keep it reusable. It's nice also for consolidating cross-browser prefixes into a single function.
 
-5. A file for each component: button, breadcrumb, list, search, footer, header, etc...
+ A good library for SASS is [Compass] (http://compass-style.org/). For LESS you can use [LESS elements] (http://lesselements.com/) and for Stylus you can use [NIB] (http://visionmedia.github.io/nib/)
+
+### Create a file for base style for HTML tags and classes
+
+ <pre lang="css"><code>
+  h1 {
+   font-size: 3em;
+  }
+
+  strong {
+   font-size: 1.2em;
+   font-weigth: bold;
+  }
+ </code></pre>
+
+### Create a file for each component: button, breadcrumb, list, search, footer, header, etc...
 <pre>
 .
 |-- stylesheets/
@@ -80,7 +86,7 @@ Normalize is a softer way to reset browsers default styles. It makes the css for
 |   |-- _framework.scss
 </pre> 
 
-6. A file that imports all components
+### Create a file that imports all components
 <pre lang="css"><code>
  @import "base"
  @import "buttons"
@@ -89,7 +95,7 @@ Normalize is a softer way to reset browsers default styles. It makes the css for
 </code></pre>
 
 
-7. A file with variables for colors, fonts, grid sizes and icons
+### Create a file with variables for colors, fonts, grid sizes and icons
 <pre lang="css"><code>
  //color variables
  $titleColor: #123f32;
@@ -102,21 +108,23 @@ Normalize is a softer way to reset browsers default styles. It makes the css for
  $gridColumns: 12;
 </code></pre>
 
-8. Use a responsive Grid
+### Use a responsive Grid
  * If you don't want to create your own grid, you can use [Foundation] (http://foundation.zurb.com/grid.php)
 
-9. Have a file for each page of your application, each file will import the mixins that are necessary
+### Have a file for each page of your application, each file will import the mixins that are necessary
 Example: login.scss and home.scss.
 
-10. Architecture Paradigms
-  * [BEM] (http://bem.info/method/) 
-  * [OOCSS] (http://oocss.org/)
-  * [SMACSS] (http://smacss.com/)
-  
-11. In the end you are gonna have a CSS framework that can be used in other projects
-12. Test your css, frontend style guides, style tyles
+### Architecture Paradigms
+ * [BEM] (http://bem.info/method/) 
+ * [OOCSS] (http://oocss.org/)
+ * [SMACSS] (http://smacss.com/)
+
+
+### In the end you are gonna have a CSS framework that can be used in other projects
+
+### Test your css, frontend style guides, style tyles
   You wanna test your CSS as any other code that we created. In order to do this you need a live page that you are gonna be able to continuously test and verify your basic styles. You can check how your style respond to different screen sizes, you can check if yout style is not breaking, etc...
 
-  [Mirebalais Style Guide] (http://mirebalaisstyleguide.herokuapp.com/)
+ * [Mirebalais Style Guide] (http://mirebalaisstyleguide.herokuapp.com/)
   
-  [Style Tiles] (http://sparkbox.github.com/style-prototype/)
+ * [Style Tiles] (http://sparkbox.github.com/style-prototype/)
