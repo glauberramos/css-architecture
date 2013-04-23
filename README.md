@@ -7,15 +7,15 @@ Information about CSS architecture and code standards. This is a live document a
 
 * Separation of Responsibility
 * Don't repeat yourself - DRY
-* Object Oriented
-* Concise
-* Coarse
-* Semantic
+* Object Oriented Code
+* Concise Code
+* Coarse Code
+* Semantics
 * Performance
-* Boilerplating
-* Testable
+* Avoid Boilerplating
+* Tests
 
-## 1. Readability
+## Readability
 
  > Readability is very important to make the code clean, mantainable and easy to change/understand. We can achieve that following code standards and some important things like:
 
@@ -33,17 +33,22 @@ Information about CSS architecture and code standards. This is a live document a
 
 ### Standards
 
- More information: 
+### More information on standards: 
  * [idiomatic.css] (https://github.com/necolas/idiomatic-css) by @necolas
  * [CSS-Guidelines] (https://github.com/csswizardry/CSS-Guidelines) by @csswizardry
  * [CSS Styleguide] (https://github.com/styleguide/css) by Github
 
-* DRY - variables
-* Single responsability, repeated code - mixins
-* Object oriented - oocss, bem, smacss
-* Boilerplating - fors
-* Perfomance - multiple selectors
-* Style is for css, not html. Semantic names - classes name
+## Boilerplating
+
+fors, ifs, while
+
+## Perfomance
+
+multiple selectors
+
+## Style is for css, not html. 
+
+Semantic names - classes name
 
 ## Pre Processors 
  
@@ -82,6 +87,8 @@ Information about CSS architecture and code standards. This is a live document a
 
  You can create a separate file for each component, example: button, breadcrumb, list, search, footer, header, etc...
  
+ This file should have a single responsability that is for example, contain the styles for buttons.
+ 
 <pre>
 .
 |-- stylesheets/
@@ -109,7 +116,7 @@ Information about CSS architecture and code standards. This is a live document a
 
 ## Create a file with variables 
 
- For colors, fonts, grid sizes and icons.
+ Don't repeat yourself. For colors, fonts, grid sizes and icons.
  
 <pre lang="css"><code>
  //color variables
@@ -132,7 +139,7 @@ Information about CSS architecture and code standards. This is a live document a
 
 ## Architecture Paradigms
 
-The goal is to have Modular CSS.
+The goal is to have Modular CSS. Objected oriented.
 
  * [BEM] (http://bem.info/method/) 
  * [OOCSS] (http://oocss.org/)
