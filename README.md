@@ -1,5 +1,8 @@
+
 #CSS Architecture and Code Standards
 ================
+
+![image] (http://www.encroach.net/images/sacred_geometry/sacred_geometry_nature/mollusk_shell.jpg)
 
 Information about CSS architecture and code standards. This is a live document and I accept and encourage contributions :D
 
