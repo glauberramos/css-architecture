@@ -22,43 +22,42 @@ This document is about styles in general so for the examples I'm using SASS.
 
 ## Readability
 
- > Readability is very important to make the code clean, mantainable and easy to change/understand. We can achieve that following code standards and some important things like:
+> Readability is very important to make the code clean, mantainable and easy to change/understand. We can achieve that following code standards and some important things like:
 
 ### White spaces
 
- White spaces are important to give a pause for your eyes and make reading fluid.
+White spaces are important to give a pause for your eyes and make reading fluid.
  
- Take a look on this example:
+Take a look on this example:
  
-  <pre lang="css"><code>
-  .photo,.picture{
-   font-size:3em;
-   img{
-     margin:0 auto;
-   }
+ <pre lang="css"><code>
+.photo,.picture{
+  font-size:3em;
+  img{
+    margin:0 auto;
   }
- </code></pre>
+}
+</code></pre>
 
- 1. Use space after colons (:) on a css property.
- 2. Use space afer the definition of a selector and before curly braces ({).
- 3. Use space after a semicolon (;).
- 4. Use a enter when you start defining style for a new selector.
+1. Use space after colons (:) on a css property.
+2. Use space afer the definition of a selector and before curly braces ({).
+3. Use space after a semicolon (;).
+4. Use a enter when you start defining style for a new selector.
  
-  Example with rules applied:
+Example with rules applied:
 
-  <pre lang="css"><code>
-  .photo, .picture {
-   font-size: 3em;
-   
-   img {
-     margin: 0 auto;
-   }
+ <pre lang="css"><code>
+.photo, .picture {
+  font-size: 3em;<br \>
+  img {
+    margin: 0 auto;
   }
- </code></pre>
+}
+</code></pre>
 
 ### Identation
 
- Ident your code to better convey the structure of it to human readers.
+Ident your code to better convey the structure of it to human readers.
 
 ### Nesting
 
@@ -67,9 +66,9 @@ This document is about styles in general so for the examples I'm using SASS.
 ### Standards
 
 ### More information on standards: 
- * [idiomatic.css] (https://github.com/necolas/idiomatic-css) by @necolas
- * [CSS-Guidelines] (https://github.com/csswizardry/CSS-Guidelines) by @csswizardry
- * [CSS Styleguide] (https://github.com/styleguide/css) by Github
+* [idiomatic.css] (https://github.com/necolas/idiomatic-css) by @necolas
+* [CSS-Guidelines] (https://github.com/csswizardry/CSS-Guidelines) by @csswizardry
+* [CSS Styleguide] (https://github.com/styleguide/css) by Github
 
 ## Boilerplating
 
@@ -85,42 +84,41 @@ Semantic names - classes name
 
 ## Pre Processors 
  
- Pre Processors are really important because they give nice tools that are common on main programming languages. Tools like: Nesting, Mixins (Functions), Variables, Fors, IFs and Selector Inheritance.
+Pre Processors are really important because they give nice tools that are common on main programming languages. Tools like: Nesting, Mixins (Functions), Variables, Fors, IFs and Selector Inheritance.
 
- * [SASS] (http://sass-lang.com/)
- * [LESS] (http://lesscss.org/)
- * [Stylus] (http://learnboost.github.io/stylus/)
+* [SASS] (http://sass-lang.com/)
+* [LESS] (http://lesscss.org/)
+* [Stylus] (http://learnboost.github.io/stylus/)
 
 ## Normalize your CSS - [Normalize] (http://necolas.github.io/normalize.css/)
  
- Normalize is a softer way to reset browsers default styles. It makes the css for common HTML tags concise beetwen all browsers and give you Cross-Browser default experience.
+Normalize is a softer way to reset browsers default styles. It makes the css for common HTML tags concise beetwen all browsers and give you Cross-Browser default experience.
 
 ## Use mixins to avoid duplicated code
 
- Uxing mixins (that are similar to functions) is very nice to avoid duplicate code and keep it reusable. It's nice also for consolidating cross-browser prefixes into a single function.
+Uxing mixins (that are similar to functions) is very nice to avoid duplicate code and keep it reusable. It's nice also for consolidating cross-browser prefixes into a single function.
 
- For common mixins you can see a library for SASS - [Compass] (http://compass-style.org/). For LESS you can use [LESS elements] (http://lesselements.com/) and for Stylus you can use [NIB] (http://visionmedia.github.io/nib/)
+For common mixins you can see a library for SASS - [Compass] (http://compass-style.org/). For LESS you can use [LESS elements] (http://lesselements.com/) and for Stylus you can use [NIB] (http://visionmedia.github.io/nib/)
 
 ## Create a file for base style
 
- For style that are for HTML common tags and generic classes you can create a _base.scss file.
+For style that are for HTML common tags and generic classes you can create a _base.scss file.
 
  <pre lang="css"><code>
   h1 {
    font-size: 3em;
-  }
-
+  }<br>
   strong {
    font-size: 1.2em;
    font-weigth: bold;
   }
- </code></pre>
+</code></pre>
 
 ## Create a file for each component
 
- You can create a separate file for each component, example: button, breadcrumb, list, search, footer, header, etc...
+You can create a separate file for each component, example: button, breadcrumb, list, search, footer, header, etc...
  
- This file should have a single responsability that is for example, contain the styles for buttons.
+This file should have a single responsability that is for example, contain the styles for buttons.
  
 <pre>
 .
@@ -149,7 +147,7 @@ Semantic names - classes name
 
 ## Create a file with variables 
 
- Don't repeat yourself. For colors, fonts, grid sizes and icons.
+Don't repeat yourself. For colors, fonts, grid sizes and icons.
  
 <pre lang="css"><code>
  //color variables
@@ -164,29 +162,28 @@ Semantic names - classes name
 </code></pre>
 
 ## Use a responsive Grid
- If you don't want to create your own grid, you can use [Foundation] (http://foundation.zurb.com/grid.php)
+If you don't want to create your own grid, you can use [Foundation] (http://foundation.zurb.com/grid.php)
 
 ## Have a file for each page of your application
 
- Each file will import the mixins that are necessary. Example: login.scss and home.scss.
+Each file will import the mixins that are necessary. Example: login.scss and home.scss.
 
 ## Architecture Paradigms
 
 The goal is to have Modular CSS. Objected oriented.
 
- * [BEM] (http://bem.info/method/) 
- * [OOCSS] (http://oocss.org/)
- * [SMACSS] (http://smacss.com/)
-
+* [BEM] (http://bem.info/method/) 
+* [OOCSS] (http://oocss.org/)
+* [SMACSS] (http://smacss.com/)
 
 ## In the end a CSS framework
 
- You are gonna have a CSS framework that can be used in other projects.
+You are gonna have a CSS framework that can be used in other projects.
 
 ## Test your CSS
 
-  Example: frontend style guides and style tyles.
-  You wanna test your CSS as any other code that we created. In order to do this you need a live page that you are gonna be able to continuously test and verify your basic styles. You can check how your style respond to different screen sizes, you can check if yout style is not breaking, etc...
+Example: frontend style guides and style tyles.
+You wanna test your CSS as any other code that we created. In order to do this you need a live page that you are gonna be able to continuously test and verify your basic styles. You can check how your style respond to different screen sizes, you can check if yout style is not breaking, etc...
 
- * [Mirebalais Style Guide] (http://mirebalaisstyleguide.herokuapp.com/)
- * [Style Tiles] (http://sparkbox.github.com/style-prototype/)
+* [Mirebalais Style Guide] (http://mirebalaisstyleguide.herokuapp.com/)
+* [Style Tiles] (http://sparkbox.github.com/style-prototype/)
