@@ -2,6 +2,9 @@
 ================
 
 Information about CSS architecture and code standards. This is a live document and I accept and encourage contributions :D
+This document contains information about my experience devoloping CSS code and also some techniques I study and try to apply in my work.
+
+This document is about styles in general so for the examples I'm using SASS.
 
 <img src="http://www.encroach.net/images/sacred_geometry/sacred_geometry_nature/mollusk_shell.jpg" width="170px"></image>
 
@@ -24,6 +27,34 @@ Information about CSS architecture and code standards. This is a live document a
 ### White spaces
 
  White spaces are important to give a pause for your eyes and make reading fluid.
+ 
+ Take a look on this example:
+ 
+  <pre lang="css"><code>
+  .photo,.picture{
+   font-size:3em;
+   img{
+     margin:0 auto;
+   }
+  }
+ </code></pre>
+
+ 1. Use space after colons (:) on a css property
+ 2. Use space afer the definition of a selector
+ 3. Use space after a semicolon (;)
+ 4. Use a enter when you start defining style for a new selector.
+ 
+  Example with rules applied:
+
+  <pre lang="css"><code>
+  .photo, .picture {
+   font-size:3em;
+   
+   img {
+     margin: 0 auto;
+   }
+  }
+ </code></pre>
 
 ### Identation
 
