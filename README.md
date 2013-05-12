@@ -39,16 +39,16 @@ This document is about styles in general so for the examples I'm using SASS.
   }
  </code></pre>
 
- 1. Use space after colons (:) on a css property
- 2. Use space afer the definition of a selector
- 3. Use space after a semicolon (;)
+ 1. Use space after colons (:) on a css property.
+ 2. Use space afer the definition of a selector and before curly braces ({).
+ 3. Use space after a semicolon (;).
  4. Use a enter when you start defining style for a new selector.
  
   Example with rules applied:
 
   <pre lang="css"><code>
   .photo, .picture {
-   font-size:3em;
+   font-size: 3em;
    
    img {
      margin: 0 auto;
