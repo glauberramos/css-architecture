@@ -17,6 +17,7 @@ This document is about styles in general so for the examples I'm using SASS.
 * Coarse Code
 * Semantics
 * Performance
+* Readability
 * Avoid Boilerplating
 * Tests
 
@@ -55,13 +56,37 @@ Example with rules applied:
 }
 </code></pre>
 
-### Identation
+### Indentation and nesting
 
-Ident your code to better convey the structure of it to human readers.
+Indent your code to better convey the structure of it to human readers. Indent help you to see the relation between html tags/ids/classes and style.
 
-### Nesting
+Take a look on this example:
+ 
+ <pre lang="css"><code>
+.person {
+width: 120px;
+.name {
+padding: 5px
+p {
+font-size: 4em;
+}
+}
+}
+</code></pre>
 
-### Identation
+With indentation and nesting:
+
+ <pre lang="css"><code>
+.person {
+  width: 120px;
+  .name {
+    padding: 5px
+    p {
+      font-size: 4em;
+    }
+  }
+}
+</code></pre>
 
 ### Standards
 
